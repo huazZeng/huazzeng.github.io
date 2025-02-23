@@ -112,10 +112,14 @@
 .section-content ul {
     list-style-type: none;
     padding-left: 0;
+    list-style-type: disc;  /* 使用圆点 */
+    font-size: 18px;
+    
 }
 
 .section-content li {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 /* 新增：增大 p 标签的字体大小和行间距 */
@@ -162,43 +166,74 @@
 
         <!-- 项目介绍 -->
         <!-- Internship Section -->
-        <section>
-            <h2 class="section-title">Research Experience</h2>
-            <div class="section-content">
-                <p><strong>Lead, Xiyuan Project at Fudan University</strong><br>
+    <section>
+        <h2 class="section-title">Research Experience</h2>
+        <div class="section-content">
+            <ul>
+                <li><strong>Lead, Xiyuan Project at Fudan University</strong><br>
                     <em>May 2024 - February 2025</em><br>
-                    Led research on Open Source License Conflict Detection using large models. 
-                </p>
-                <p><strong>Intern, Software Engineering Lab, Fudan University</strong>
+                    Led research on Open Source License Conflict Detection using large models.
+                </li>
+                <li><strong>Intern, Software Engineering Lab, Fudan University</strong>
                     [<a href="https://dl.acm.org/doi/10.1145/3650212.3680339" class="tag">paper</a>]<br>
                     <em>October 2023 - March 2024</em><br>
-                    Worked on open source license violation detection tools, contributing to research published at ISSTA 2024.
-                </p>
-                <p><strong>Data Collection for LLM-EVAL, NLP Lab, Fudan University</strong><br>
+                    Worked on open source license violation detection tools, contributing to research published at ISSTA
+                    2024.
+                </li>
+                <li><strong>Data Collection for LLM-EVAL, NLP Lab, Fudan University</strong><br>
                     <em>June 2023 - September 2023</em><br>
-                    Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model comparisons.
-                </p>
-            </div>
-        </section>
-        
-        <!-- Projects Section -->
-        <section>
-            <h2 class="section-title">Projects</h2>
-            <div class="section-content">
-                <p><strong>Large Model Fine-tuning for Mathematical Reasoning</strong>
+                    Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model
+                    comparisons.
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-content">
+            <ul>
+                <li><strong>Large Model Fine-tuning for Mathematical Reasoning</strong>
                     [<a href="https://github.com/huazZeng/NLP_PJ" class="tag">code</a>] |
-                    [<a href="https://github.com/huazZeng/NLP_PJ/blob/v-submit/12-Empowering%20Reasoning%20through%20Efficient%20Fine-Tuning%2C%20Augmentation%2C%20and%20Multi-Round%20Voting.pdf" class="tag">paper</a>]
+                    [<a href="https://github.com/huazZeng/NLP_PJ/blob/v-submit/12-Empowering%20Reasoning%20through%20Efficient%20Fine-Tuning%2C%20Augmentation%2C%20and%20Multi-Round%20Voting.pdf"
+                        class="tag">paper</a>]
                     <br>
-                    Fine-tuned Qwen2.5 for improved performance on GSM8K and MATH datasets, using data augmentation and LoRA.
-                </p>
+                    Fine-tuned Qwen2.5 for improved performance on GSM8K and MATH datasets, using data augmentation and
+                    LoRA.
+                </li>
+                <li><strong>Traditional NLP Tasks with Large Models</strong>
+                    [<a href="https://github.com/huazZeng/LLM_NLPTask" class="tag">code</a>]
+                    <br>
+                    Worked on text summarization and NER with Qwen2.5, applying Chain-of-Thought (CoT) for better model
+                    results.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+        
+
+
+        <section>
+            <h2 class="section-title">
+                Publications
                 
-                <p><strong>Traditional NLP Tasks with Large Models</strong>
-                     [<a href="https://github.com/huazZeng/LLM_NLPTask" class="tag">code</a>] <br>
-                    Worked on text summarization and NER with Qwen2.5, applying Chain-of-Thought (CoT) for better model results.
-                </p>
+            </h2>
+            <div class="section-content">
+                <ul>
+                    <ul>
+                        <li>
+                            Kaifeng Huang, Yingfeng Xia, Bihuan Chen, Siyang He, <u>Huazheng Zeng</u>, Zhuotong Zhou, Jin Guo, Xin
+                                Peng(2024). 
+                                <em>Your “Notice” Is Missing: Detecting and Fixing Violations of Modification Terms in Open Source Licenses
+                                    during Forking.</em>
+                                <em>ISSTA 2024</em>.
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </section>
-
     </div>
 
 </body>
