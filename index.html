@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huazheng Zeng - AcademicPage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* 左侧侧栏样式 */
+        .sidebar {
+            width: 350px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right: 3px solid #34495e;
+        }
+
+        /* 左侧栏图片样式 */
+        .sidebar img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            /* 增加图片和下面内容的间距 */
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            /* 增加标题与下面内容的间距 */
+        }
+
+        .sidebar p,
+        .sidebar ul {
+            margin-bottom: 5px;
+            /* 增加每个模块之间的间距 */
+            font-size: 16px;
+        }
+
+        /* 为了减少模块内部的间距 */
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 10;
+            margin: 10;
+            /* 去掉默认的ul列表项之间的间距 */
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            /* 调整li项之间的间距 */
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* 主体内容部分样式 */
+       .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-content h1,
+.main-content h2 {
+    color: #2c3e50;
+}
+
+.main-content h1 {
+    margin-top: 0;
+}
+
+.section-title {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section-content {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.section-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.section-content li {
+    margin-bottom: 10px;
+}
+
+/* 新增：增大 p 标签的字体大小和行间距 */
+.main-content p {
+    font-size: 18px; /* 增大字体大小 */
+    line-height: 1.8; /* 增加行间距 */
+    margin-bottom: 20px; /* 增加段落间距 */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 左侧侧栏 -->
+    <div class="sidebar">
+        <!-- 图片 -->
+        <img src="image/me.jpg" alt="Profile Image">
+
+        <h2>Huazheng Zeng</h2>
+        <p>An Undergraduate in Fudan University</p>
+        <p><strong>Contact:</strong></p>
+        <ul>
+            <li>github: <a href="https://github.com/huazZeng">https://github.com/huazZeng</a></li>
+        </ul>
+        <p><strong>Research Interests:</strong></p>
+        <ul>
+            <li>Open Source Software</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>AI-driven Systems</li>
+        </ul>
+    </div>
+
+    <!-- 主体内容部分 -->
+    <div class="main-content">
+        <h1>Huazheng Zeng</h1>
+        <p>I am an Undergraduate at Fudan University studying Software Engineering with a focus on OpenSourceSoftware and
+            machine learning.</p>
+        <p> My research interests include OpenSource Software, Machine Learning, Deep Learning, and
+            AI-driven systems.</p>
+
+        <!-- 项目介绍 -->
+        <!-- Internship Section -->
+        <section>
+            <h2 class="section-title">Internship Experience</h2>
+            <div class="section-content">
+                <p><strong>Lead, Xiyuan Project at Fudan University</strong><br>
+                    <em>May 2024 - February 2025</em><br>
+                    Led research on Open Source License Conflict Detection using large models. 
+                </p>
+                <p><strong>Intern, Software Engineering Lab, Fudan University</strong>
+                    [<a href="https://dl.acm.org/doi/10.1145/3650212.3680339" class="tag">paper</a>]<br>
+                    <em>October 2023 - March 2024</em><br>
+                    Worked on open source license violation detection tools, contributing to research published at ISSTA 2024.
+                </p>
+                <p><strong>Data Collection for LLM-EVAL, NLP Lab, Fudan University</strong><br>
+                    <em>June 2023 - September 2023</em><br>
+                    Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model comparisons.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-content">
+                <p><strong>Large Model Fine-tuning for Mathematical Reasoning</strong>
+                    [<a href="https://github.com/huazZeng/NLP_PJ" class="tag">code</a>] |
+                    [<a href="https://github.com/huazZeng/NLP_PJ/blob/v-submit/12-Empowering%20Reasoning%20through%20Efficient%20Fine-Tuning%2C%20Augmentation%2C%20and%20Multi-Round%20Voting.pdf" class="tag">paper</a>]
+                    <br>
+                    Fine-tuned Qwen2.5 for improved performance on GSM8K and MATH datasets, using data augmentation and LoRA.
+                </p>
+                <p><strong>Traditional NLP Tasks with Large Models</strong><br>
+                    Worked on text summarization and NER with Qwen2.5, applying Chain-of-Thought (CoT) for better model results.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
