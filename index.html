@@ -11,128 +11,262 @@
     <title>Huazheng Zeng - AcademicPage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             min-height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
         /* 左侧侧栏样式 */
         .sidebar {
-            width: 350px;
-            background-color: #2c3e50;
+            width: 320px;
+            background: linear-gradient(180deg, #1a2332 0%, #2c3e50 100%);
             color: white;
-            padding: 20px;
+            padding: 30px 25px;
             height: 100vh;
-            position: relative;
+            position: fixed;
+            left: 0;
+            top: 0;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            border-right: 3px solid #34495e;
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
         }
 
         /* 左侧栏图片样式 */
         .sidebar img {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            /* 增加图片和下面内容的间距 */
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.1);
         }
 
         .sidebar h2 {
             text-align: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            /* 增加标题与下面内容的间距 */
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
-        .sidebar p,
-        .sidebar ul {
-            margin-bottom: 5px;
-            /* 增加每个模块之间的间距 */
+        .sidebar p {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 15px;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .sidebar p strong {
+            display: block;
             font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: #fff;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 8px;
         }
 
-        /* 为了减少模块内部的间距 */
         .sidebar ul {
             list-style-type: none;
-            padding-left: 10;
-            margin: 10;
-            /* 去掉默认的ul列表项之间的间距 */
+            padding-left: 0;
+            margin: 0 0 20px 0;
         }
 
         .sidebar ul li {
             margin-bottom: 10px;
-            /* 调整li项之间的间距 */
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d0d0d0;
+            padding-left: 8px;
+            border-left: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li:hover {
+            border-left-color: #3498db;
+            padding-left: 12px;
         }
 
         .sidebar a {
-            color: white;
+            color: #5dade2;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .sidebar a:hover {
+            color: #85c1e9;
             text-decoration: underline;
         }
 
         /* 主体内容部分样式 */
-       .main-content {
-    flex: 1;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    overflow-y: auto;
-}
+        .main-content {
+            flex: 1;
+            margin-left: 370px;
+            padding: 50px 60px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
 
-.main-content h1,
-.main-content h2 {
-    color: #2c3e50;
-}
+        .main-content h1 {
+            color: #1a2332;
+            font-size: 36px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
 
-.main-content h1 {
-    margin-top: 0;
-}
+        .main-content h2 {
+            color: #2c3e50;
+        }
 
-.section-title {
-    font-size: 22px;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
+        .section-title {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            padding-left: 15px;
+            border-left: 4px solid #3498db;
+        }
 
-.section-content {
-    margin-bottom: 30px;
-    margin-left: 30px;
-}
+        .section-content {
+            margin-bottom: 40px;
+            margin-left: 20px;
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
 
-.section-content ul {
-    list-style-type: none;
-    padding-left: 0;
-    list-style-type: disc;  /* 使用圆点 */
-    
-    font-size: 18px; /* 增大字体大小 */
-    line-height: 1.8; /* 增加行间距 */
-    margin-bottom: 20px; /* 增加段落间距 */
-    
-}
+        .section-content ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
-.section-content li {
-    margin-bottom: 10px;
-    font-size: 18px; /* 增大字体大小 */
-    line-height: 1.8; /* 增加行间距 */
-    margin-bottom: 20px; /* 增加段落间距 */
-}
+        .section-content li {
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+            padding-left: 20px;
+            position: relative;
+            background-color: white;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+            transition: all 0.3s ease;
+        }
 
-/* 新增：增大 p 标签的字体大小和行间距 */
-.main-content p {
-    font-size: 18px; /* 增大字体大小 */
-    line-height: 1.8; /* 增加行间距 */
-    margin-bottom: 20px; /* 增加段落间距 */
-}
+        .section-content li:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateX(5px);
+        }
+
+        .section-content li strong {
+            color: #2c3e50;
+            font-size: 17px;
+            display: inline;
+            margin-right: 5px;
+        }
+
+        .section-content li em {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .location-time {
+            float: right;
+            color: #7f8c8d;
+            font-weight: 400;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .section-content li br {
+            clear: both;
+        }
+
+        /* 新增：增大 p 标签的字体大小和行间距 */
+        .main-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .main-content a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .main-content a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .main-content a.tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #e8f4f8;
+            border-radius: 5px;
+            font-size: 13px;
+            margin: 0 4px;
+            color: #2980b9;
+            border: 1.5px solid #3498db;
+            font-weight: 500;
+            vertical-align: middle;
+            transition: all 0.2s ease;
+        }
+
+        .main-content a.tag:hover {
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 280px;
+            }
+            .main-content {
+                margin-left: 330px;
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+        }
 
     </style>
 </head>
@@ -145,17 +279,20 @@
         <img src="image/me.jpg" alt="Profile Image">
 
         <h2>Huazheng Zeng</h2>
-        <p>An Undergraduate in Fudan University</p>
-        <p><strong>Contact:</strong></p>
+        <p style="margin-bottom: 30px;">Undergraduate Student<br>Fudan University</p>
+        
+        <p><strong>Contact</strong></p>
         <ul>
-            <li>github: <a href="https://github.com/huazZeng">https://github.com/huazZeng</a></li>
-            <li>email : <a href="hzceng22@m.fudan.edu.cn">hzceng22@m.fudan.edu.cn</a></li>
-            
+            <li>GitHub: <a href="https://github.com/huazZeng" target="_blank">huazZeng</a></li>
+            <li>Email: <a href="mailto:hzceng22@m.fudan.edu.cn">hzceng22@m.fudan.edu.cn</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/huazheng-zeng-2750a3372/" target="_blank">Huazheng Zeng</a></li>
+            <li>Google Scholar: <a href="https://scholar.google.cz/citations?hl=zh-CN&pli=1&user=tCOHRhgAAAAJ" target="_blank">Huazheng Zeng</a></li>
         </ul>
-        <p><strong>Research Interests:</strong></p>
+        
+        <p><strong>Research Interests</strong></p>
         <ul>
-            <li>Vison-Language-model</li>
-            <li>Multi-Modal</li>
+            <li>Vision-Language Models</li>
+            <li>Multi-Modal Learning</li>
             <li>Open Source Software</li>
             <li>AI-driven Systems</li>
         </ul>
@@ -163,79 +300,72 @@
 
     <!-- 主体内容部分 -->
     <div class="main-content">
-        <h1>Huazheng Zeng</h1>
-        <p>I am an Undergraduate at Fudan University studying Software Engineering .</p>
-        <p> My research interests include Vison-Language-model ， Multi-Modal ，Open Source Software, and
-            AI-driven systems.</p>
-        <p> My Blog Web : [<a href="https://huazzengblog.github.io/" class="tag">huazZeng's blog</a>] </p>
+        <h1>About Me</h1>
+        <p>I am an undergraduate student at <strong>Fudan University</strong>, majoring in Software Engineering. My research interests focus on <strong>Vision-Language Models</strong>, <strong>Multi-Modal Learning</strong>, <strong>Open Source Software</strong>, and <strong>AI-driven Systems</strong>.</p>
+        <p>I am passionate about bridging the gap between computer vision and natural language processing, exploring innovative approaches to multi-modal understanding.</p>
+        <p>Personal Blog: <a href="https://huazzengblog.github.io/" class="tag" target="_blank">huazZeng's Blog</a></p>
 
-        <!-- 项目介绍 -->
-        <!-- Internship Section -->
-    <section>
-        <h2 class="section-title">Research Experience</h2>
-        <div class="section-content">
-            <ul>
-                <li><strong>Collaborative Researcher, Xiyuan Project at Fudan University</strong>
-                    [<a href="https://github.com/huazZeng/license_llm_public" class="tag">code</a>]|
-                [<a href="https://github.com/huazZeng/license_llm_public/blob/main/report.pdf" class="tag">report</a>]
-                <br>
-                    <em>May 2024 - February 2025</em><br>
-                    
-
-
-                    Conducted a research focused on detecting conflicts in open-source licenses using large language models.
-                </li>
-                <li><strong>Research Assistant, SE Lab, Fudan University</strong>
-                    [<a href="https://dl.acm.org/doi/10.1145/3650212.3680339" class="tag">paper</a>]<br>
-                    <em>October 2023 - March 2024</em><br>
-                    Worked on open source license violation detection tools, contributing to research published at ISSTA
-                    2024.
-                </li>
-                <li><strong>Research Assistant, NLP Lab, Fudan University</strong><br>
-                    <em>June 2023 - September 2023</em><br>
-                    Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model
-                    comparisons.
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <h2 class="section-title">
-            Internships
-    
-        </h2>
-        <div class="section-content">
-            <ul>
-                <ul>
-                    <li>
-                       <strong>Vision-Language Intern，Shanghai AI Lab</strong><br>
-                            <em>July 2025 - Now</em><br>
-                    
-                        
-                    </li>
-                </ul>
-            </ul>
-        </div>
-    </section>
-    
-                
-        
         <section>
-            <h2 class="section-title">
-                Publications
-                
-            </h2>
+            <h2 class="section-title">News</h2>
             <div class="section-content">
                 <ul>
-                    <ul>
-                        <li>
-                            Kaifeng Huang, Yingfeng Xia, Bihuan Chen, Siyang He, <u>Huazheng Zeng</u>, Zhuotong Zhou, Jin Guo, Xin
-                                Peng(2024). 
-                                <em>Your “Notice” Is Missing: Detecting and Fixing Violations of Modification Terms in Open Source Licenses
-                                    during Forking.</em>
-                                <em>ISSTA 2024</em>.
-                        </li>
-                    </ul>
+                    <li>
+                        <strong>[2025.07]</strong> Started internship at Shanghai AI Lab, working on vision-language models for document parsing.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Internships</h2>
+            <div class="section-content">
+                <ul>
+                    <li>
+                        <span class="location-time">Shanghai AI Lab | July 2025 - Present</span>
+                        <strong>Vision-Language Research Intern</strong>
+                        <br>
+                        Working on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href="https://github.com/opendatalab/MinerU/" target="_blank">MinerU</a>.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Research Experience</h2>
+            <div class="section-content">
+                <ul>
+                    <li>
+                        <span class="location-time">Fudan University | May 2024 - February 2025</span>
+                        <strong>Collaborative Researcher, Xiyuan Project</strong> <a href="https://github.com/huazZeng/license_llm_public" class="tag" target="_blank">Code</a> <a href="https://github.com/huazZeng/license_llm_public/blob/main/report.pdf" class="tag" target="_blank">Report</a>
+                        <br>
+                        Conducted research focused on detecting conflicts in open-source licenses using large language models. Developed an automated system to identify and analyze license compatibility issues in software dependencies.
+                    </li>
+                    <li>
+                        <span class="location-time">Fudan University | October 2023 - March 2024</span>
+                        <strong>Research Assistant, Software Engineering Lab</strong> <a href="https://dl.acm.org/doi/10.1145/3650212.3680339" class="tag" target="_blank">Paper</a>
+                        <br>
+                        Worked on open-source license violation detection tools, contributing to research published at ISSTA 2024. Participated in developing novel methods for detecting and fixing violations of modification terms during software forking.
+                    </li>
+                    <li>
+                        <span class="location-time">Fudan University | June 2023 - September 2023</span>
+                        <strong>Research Assistant, Natural Language Processing Lab</strong>
+                        <br>
+                        Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model comparisons. Assisted in evaluating and benchmarking various large language models.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Publications</h2>
+            <div class="section-content">
+                <ul>
+                    <li>
+                        <strong><a href="https://dl.acm.org/doi/10.1145/3650212.3680339" target="_blank" style="color: #2c3e50; text-decoration: none;">Your 'Notice' Is Missing: Detecting and Fixing Violations of Modification Terms in Open Source Licenses during Forking</a></strong>
+                        Kaifeng Huang, Yingfeng Xia, Bihuan Chen, Siyang He, <u>Huazheng Zeng</u>, Zhuotong Zhou, Jin Guo, Xin Peng
+                        <br>
+                        <em>ISSTA 2024 - ACM SIGSOFT International Symposium on Software Testing and Analysis</em>
+                    </li>
                 </ul>
             </div>
         </section>
