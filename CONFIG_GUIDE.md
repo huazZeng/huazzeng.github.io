@@ -1,0 +1,169 @@
+# 个人主页配置指南
+
+## 项目结构
+
+```
+huazzeng.github.io/
+├── index.html          # 主HTML文件（结构模板）
+├── css/
+│   └── style.css      # 样式表文件
+├── js/
+│   ├── data.js        # 数据配置文件（修改内容在这里）
+│   └── main.js        # 渲染逻辑文件
+├── image/
+│   ├── cat.jpg        # 个人照片
+│   └── me.jpg
+└── README.md          # 项目说明
+
+```
+
+## 如何修改内容
+
+### 1. 修改个人信息
+
+打开 `js/data.js` 文件，找到 `profile` 部分：
+
+```javascript
+profile: {
+    name: "Huazheng Zeng",
+    title: "Undergraduate Student / Incoming PhD Student",
+    institution: "Fudan University",
+    photo: "image/cat.jpg",
+    blog: "https://huazzengblog.github.io/"
+}
+```
+
+### 2. 修改联系方式
+
+在 `js/data.js` 中修改 `contact` 部分：
+
+```javascript
+contact: {
+    github: { label: "huazZeng", url: "https://github.com/huazZeng" },
+    email: "hzceng22@m.fudan.edu.cn",
+    linkedin: { label: "Huazheng Zeng", url: "..." },
+    googleScholar: { label: "Huazheng Zeng", url: "..." }
+}
+```
+
+### 3. 添加新闻
+
+在 `js/data.js` 的 `news` 数组中添加新条目：
+
+```javascript
+news: [
+    {
+        date: "2025.07",
+        content: "Started internship at Shanghai AI Lab..."
+    },
+    // 添加新的新闻
+    {
+        date: "2025.08",
+        content: "Your new news here..."
+    }
+]
+```
+
+### 4. 添加实习经历
+
+在 `js/data.js` 的 `internships` 数组中添加：
+
+```javascript
+internships: [
+    {
+        title: "职位名称",
+        location: "公司/机构名称",
+        period: "开始时间 - 结束时间",
+        description: "工作描述"
+    }
+]
+```
+
+### 5. 添加研究经历
+
+在 `js/data.js` 的 `research` 数组中添加：
+
+```javascript
+research: [
+    {
+        title: "项目名称",
+        location: "机构名称",
+        period: "时间段",
+        description: "项目描述",
+        links: [  // 可选
+            { label: "Code", url: "https://..." },
+            { label: "Paper", url: "https://..." }
+        ]
+    }
+]
+```
+
+### 6. 添加论文
+
+在 `js/data.js` 的 `publications` 数组中添加：
+
+```javascript
+publications: [
+    {
+        title: "论文标题",
+        authors: "作者列表",
+        venue: "会议/期刊名称",
+        url: "论文链接"
+    }
+]
+```
+
+## 优势
+
+### ✅ 分离关注点
+- **HTML**: 只负责页面结构
+- **CSS**: 只负责样式
+- **JavaScript**: 负责数据和逻辑
+- **Data**: 只存储内容数据
+
+### ✅ 易于维护
+- 修改内容只需编辑 `data.js` 文件
+- 修改样式只需编辑 `style.css` 文件
+- 不需要在HTML中查找和修改
+
+### ✅ 代码复用
+- 相同的HTML结构可以展示不同的数据
+- 样式可以独立更新
+- 添加新内容只需在数组中添加对象
+
+### ✅ 可扩展
+- 容易添加新的部分（如Awards、Projects等）
+- 可以轻松添加新功能（如搜索、筛选等）
+
+## 快速开始
+
+1. **修改内容**: 编辑 `js/data.js`
+2. **调整样式**: 编辑 `css/style.css`
+3. **查看效果**: 在浏览器中打开 `index.html`
+
+## 注意事项
+
+- 修改 `data.js` 后，刷新浏览器即可看到更新
+- HTML和JavaScript使用ID进行关联，不要随意修改ID名称
+- 保持数据对象的结构完整，避免遗漏必需字段
+- 可以使用HTML标签在字符串中（如 `<strong>`、`<a>` 等）
+
+## 示例：添加新的项目经历
+
+在 `js/data.js` 中找到 `research` 数组，添加：
+
+```javascript
+{
+    title: "My New Project",
+    location: "My Institution",
+    period: "January 2025 - Present",
+    description: "Project description here...",
+    links: [
+        { label: "Demo", url: "https://demo.com" },
+        { label: "Code", url: "https://github.com/..." }
+    ]
+}
+```
+
+保存文件，刷新浏览器，新内容会自动显示！
+
