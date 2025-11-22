@@ -9,7 +9,7 @@ const personalData = {
         name: "Huazheng Zeng",
         title: "Undergraduate Student / Incoming PhD Student",
         institution: "Fudan University",
-        photo: "image/cat.jpg",
+        photo: "image/me_back.jpeg",
         blog: "https://huazzengblog.github.io/"
     },
 
@@ -48,6 +48,10 @@ const personalData = {
     // 新闻动态
     news: [
         {
+            date: "2025.11",
+            content: "Finished internship at Shanghai AI Lab and started a new internship at FNLP."
+        },
+        {
             date: "2025.07",
             content: "Started internship at Shanghai AI Lab, working on vision-language models for document parsing."
         }
@@ -58,7 +62,7 @@ const personalData = {
         {
             title: "Vision-Language Research Intern",
             location: "Shanghai AI Lab",
-            period: "July 2025 - Present",
+            period: "July 2025 - December 2025",
             description: "Working on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href='https://github.com/opendatalab/MinerU/' target='_blank'>MinerU</a>."
         }
     ],
