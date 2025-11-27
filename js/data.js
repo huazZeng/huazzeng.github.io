@@ -49,7 +49,12 @@ const personalData = {
     news: [
         {
             date: "2025.11",
-            content: "Concluded my internship at Shanghai AI Lab, where I greatly enjoyed working alongside talented colleagues. Excited to begin a new journey as an intern at FNLP."
+            content : "Started a new internship at FNLP, embarking on an exciting new adventure!"
+        },
+        
+        {
+            date: "2025.11",
+            content : "Concluded my internship at Shanghai AI Lab, where I greatly enjoyed working alongside talented colleagues."
         },
         {
             date: "2025.07",
