@@ -9,7 +9,7 @@ const personalData = {
         name: "Huazheng Zeng",
         title: "Undergraduate Student / Incoming PhD Student",
         institution: "Fudan University",
-        photo: "image/me_back.jpeg",
+        photo: "image/image.png",
         blog: "https://huazzengblog.github.io/"
     },
 
