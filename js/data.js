@@ -68,7 +68,7 @@ const personalData = {
             title: "Vision-Language Research Intern",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "Working on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href='https://github.com/opendatalab/MinerU/' target='_blank'>MinerU</a>. Participated in the production of million-scale data."
+            description: "Working on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href='https://github.com/opendatalab/MinerU/' target='_blank'>MinerU</a>. Participated in the production of million-scale data , and familiar with scaling data processing pipelines."
         }
     ],
 
