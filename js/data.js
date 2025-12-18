@@ -9,7 +9,7 @@ const personalData = {
         name: "Huazheng Zeng",
         title: "Undergraduate Student / Incoming PhD Student",
         institution: "Fudan University",
-        photo: "image/me_back.jpeg",
+        photo: "image/image.png",
         blog: "https://huazzengblog.github.io/"
     },
 
@@ -68,7 +68,7 @@ const personalData = {
             title: "Vision-Language Research Intern",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: " As a member of the MinerU4Chem team, I worked on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href='https://github.com/opendatalab/MinerU/' target='_blank'>MinerU</a>"
+            description: "As a member of the MinerU4Chem team, I worked on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href='https://github.com/opendatalab/MinerU/' target='_blank'>MinerU</a>. Participated in the production of million-scale data, and familiar with scaling data processing pipelines."
         }
     ],
 
