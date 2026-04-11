@@ -103,7 +103,8 @@ const personalData = {
             title: "MinerU: Document Parsing Engine",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "Optimized the core algorithm of MinerU (59k+ stars on GitHub), fixing multiple parsing errors in complex layouts. ",
+            description: "Optimized and enhanced MinerU’s post-processing algorithm, significantly improving extraction accuracy and robustness for complex document layouts.",
+       
             links: [
                 { label: "GitHub", url: "https://github.com/opendatalab/MinerU" }
             ]
