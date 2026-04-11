@@ -49,6 +49,7 @@ function renderMainContent() {
     renderNews();
     renderInternships();
     renderResearch();
+    renderProjects();
     renderPublications();
 }
 
@@ -85,6 +86,29 @@ function renderInternships() {
 function renderResearch() {
     const researchList = document.getElementById('research-list');
     researchList.innerHTML = personalData.research.map(item => {
+        const links = item.links ? item.links.map(link =>
+            `<a href="${link.url}" class="tag" target="_blank">${link.label}</a>`
+        ).join(' ') : '';
+
+        return `
+            <li>
+                <span class="location-time">${item.location} | ${item.period}</span>
+                <strong>${item.title}</strong> ${links}
+                <br>
+                ${item.description}
+            </li>
+        `;
+    }).join('');
+}
+
+/**
+ * 渲染项目经历
+ */
+function renderProjects() {
+    const projectsList = document.getElementById('projects-list');
+    if (!projectsList) return;
+    
+    projectsList.innerHTML = personalData.projects.map(item => {
         const links = item.links ? item.links.map(link =>
             `<a href="${link.url}" class="tag" target="_blank">${link.label}</a>`
         ).join(' ') : '';

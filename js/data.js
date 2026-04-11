@@ -40,7 +40,7 @@ const personalData = {
 
     // About Me 描述
     about: [
-        "I am an final-year undergraduate student at <strong>Fudan University</strong>, majoring in Software Engineering. Incoming PhD student at Fudan University.",
+        "I am a final-year undergraduate student at <strong>Fudan University</strong>, majoring in Software Engineering. I will be joining Fudan University as a PhD student in Computer Science and Technology in September 2026, advised by Prof. Xipeng Qiu.",
         "My research interests focus on <strong>Vision-Language Models</strong>, <strong>Multi-Modal Learning</strong>, <strong>Open Source Software</strong>, and <strong>AI-driven Systems</strong>.",
         "I am passionate about bridging the gap between vision and language, exploring innovative approaches to multi-modal understanding."
     ],
@@ -48,8 +48,8 @@ const personalData = {
     // 新闻动态
     news: [
         {
-            date: "2025.11",
-            content : "Started a new internship at FNLP, embarking on an exciting new adventure!"
+            date: "2025.12",
+            content : "Started a new internship at Fudan University OpenMOSS Team, embarking on an exciting new adventure!"
         },
         
         {
@@ -65,15 +65,49 @@ const personalData = {
     // 实习经历
     internships: [
         {
-            title: "Vision-Language Research Intern",
+            title: "VLM Pre-training Algorithm Intern",
+            location: "OpenMOSS Team",
+            period: "December 2025 - Present",
+            description: "Participated in the development of the open-source vision-language model <strong>MOSS-VL</strong>, leading the <strong>OCR and Document</strong> capabilities. Deeply involved in the <strong>pre-training process</strong> and constructed the complete data pipeline, producing <strong>200M</strong> high-quality pre-training data through data synthesis and knowledge distillation. Designed large-scale data production pipelines, optimized Grounding data pipelines, and achieved a <strong>2x speedup</strong> through distributed scheduling. Built a <strong>data task management platform</strong> and contributed a <strong>distributed deployment demo</strong>."
+        },
+        {
+            title: "Vision-Language Model Algorithm Intern",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "As a member of the MinerU4Chem team, I worked on post-training of vision-language models. Adapted document parsing models to downstream professional domains and contributed code to the open-source project <a href='https://github.com/opendatalab/MinerU/' target='_blank'>MinerU</a>. Participated in the production of million-scale data, and familiar with scaling data processing pipelines."
+            description: "Participated in the development of <strong>document parsing tools</strong> and <strong>vision-language models</strong> for the chemistry domain. Explored the <strong>fine-grained grounding</strong> capabilities of general VLMs and improved the extraction accuracy of molecular spectra through supervised fine-tuning. Participated in a <strong>10-million scale</strong> data production project, implementing distributed deployment and task scheduling based on <strong>Ray</strong>. Optimized the core algorithm of <strong>MinerU</strong> (GitHub 59k+ stars) and fixed multiple parsing errors in complex layouts, with PRs merged into the main repository. Designed and implemented a <strong>unified VLM online/offline inference framework</strong> supporting multiple backends like vLLM."
         }
     ],
 
     // 研究经历
     research: [
+        {
+            title: "Research Assistant, Natural Language Processing Lab",
+            location: "Fudan University",
+            period: "June 2023 - September 2023",
+            description: "Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model comparisons. Assisted in evaluating and benchmarking various large language models."
+        }
+    ],
+
+    // 项目经历
+    projects: [
+        {
+            title: "MOSS-VL: Open-Source Vision-Language Model",
+            location: "Fudan University",
+            period: "December 2025 - Present",
+            description: "Leading the OCR and Document capabilities for MOSS-VL. Built a complete data pipeline producing 200M high-quality pre-training data. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
+            links: [
+                { label: "GitHub", url: "https://github.com/OpenMOSS/MOSS-VL" }
+            ]
+        },
+        {
+            title: "MinerU: Document Parsing Engine",
+            location: "Shanghai AI Lab",
+            period: "July 2025 - November 2025",
+            description: "Optimized the core algorithm of MinerU (59k+ stars on GitHub), fixing multiple parsing errors in complex layouts. ",
+            links: [
+                { label: "GitHub", url: "https://github.com/opendatalab/MinerU" }
+            ]
+        },
         {
             title: "Collaborative Researcher, Xiyuan Project",
             location: "Fudan University",
@@ -84,21 +118,7 @@ const personalData = {
                 { label: "Report", url: "https://github.com/huazZeng/license_llm_public/blob/main/report.pdf" }
             ]
         },
-        {
-            title: "Research Assistant, Software Engineering Lab",
-            location: "Fudan University",
-            period: "October 2023 - March 2024",
-            description: "Worked on open-source license violation detection tools, contributing to research published at ISSTA 2024. Participated in developing novel methods for detecting and fixing violations of modification terms during software forking.",
-            links: [
-                { label: "Paper", url: "https://dl.acm.org/doi/10.1145/3650212.3680339" }
-            ]
-        },
-        {
-            title: "Research Assistant, Natural Language Processing Lab",
-            location: "Fudan University",
-            period: "June 2023 - September 2023",
-            description: "Contributed to the LLM-EVAL project by handling data cleaning, dataset construction, and model comparisons. Assisted in evaluating and benchmarking various large language models."
-        }
+        
     ],
 
     // 论文发表
