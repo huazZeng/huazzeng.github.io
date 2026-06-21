@@ -78,7 +78,7 @@ const personalData = {
             title: "Vision-Language Model Algorithm Intern",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "Developed vision-language models and document parsing tools for the chemistry domain, applying fine-grained grounding and supervised fine-tuning to improve molecular spectra extraction. Engineered a 10-million-scale data production pipeline with distributed deployment and Ray-based task scheduling. Optimized the core algorithm of <a href=\"https://github.com/opendatalab/MinerU\" target=\"_blank\">MinerU</a> (59k+ GitHub stars), fixing complex layout parsing errors with PRs merged into the main repository. Built a unified VLM inference framework supporting online and offline serving with backends including vLLM."
+            description: "Developed vision-language models and document parsing tools for the chemistry domain, pursuing fine-grained grounding through supervised fine-tuning to improve molecular spectra extraction. Deeply involved in a 10-million-scale data production pipeline, contributing to distributed deployment and Ray-based task scheduling. Optimized the core algorithm of <a href=\"https://github.com/opendatalab/MinerU\" target=\"_blank\">MinerU</a> (59k+ GitHub stars), fixing complex layout parsing errors with PRs merged into the main repository. Built a unified VLM inference framework supporting online and offline serving with backends including vLLM."
         }
     ],
 
