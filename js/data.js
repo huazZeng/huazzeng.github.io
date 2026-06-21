@@ -68,13 +68,13 @@ const personalData = {
             title: "VLM Pre-training Algorithm Intern",
             location: "OpenMOSS Team",
             period: "December 2025 - Present",
-            description: "Participated in the development of the open-source vision-language model <strong>MOSS-VL</strong>, leading the <strong>OCR and Document</strong> capabilities. Deeply involved in the <strong>pre-training process</strong> and constructed the complete data pipeline, producing <strong>200M</strong> high-quality pre-training data through data synthesis and knowledge distillation. Designed large-scale data production pipelines, optimized Grounding data pipelines, and achieved a <strong>2x speedup</strong> through distributed scheduling. Built a <strong>data task management platform</strong> and contributed a <strong>distributed deployment demo</strong>."
+            description: "Led end-to-end OCR capability development for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, primarily responsible for OCR foundation data and document parsing data. Drove model training for fine-grained perception capabilities including text localization, document parsing, and chart understanding, with deep involvement in evaluation and inference. Also a major contributor to team engineering infrastructure, including large-scale production pipelines and Grounding pipeline optimization."
         },
         {
             title: "Vision-Language Model Algorithm Intern",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "Participated in the development of <strong>document parsing tools</strong> and <strong>vision-language models</strong> for the chemistry domain. Explored the <strong>fine-grained grounding</strong> capabilities of general VLMs and improved the extraction accuracy of molecular spectra through supervised fine-tuning. Participated in a <strong>10-million scale</strong> data production project, implementing distributed deployment and task scheduling based on <strong>Ray</strong>. Optimized the core algorithm of <strong>MinerU</strong> (GitHub 59k+ stars) and fixed multiple parsing errors in complex layouts, with PRs merged into the main repository. Designed and implemented a <strong>unified VLM online/offline inference framework</strong> supporting multiple backends like vLLM."
+            description: "Participated in the development of <strong>document parsing tools</strong> and <strong>vision-language models</strong> for the chemistry domain. Explored the <strong>fine-grained grounding</strong> capabilities of general VLMs and improved the extraction accuracy of molecular spectra through supervised fine-tuning. Participated in a <strong>10-million scale</strong> data production project, implementing distributed deployment and task scheduling based on <strong>Ray</strong>. Optimized the core algorithm of <a href=\"https://github.com/opendatalab/MinerU\" target=\"_blank\">MinerU</a> (GitHub 59k+ stars) and fixed multiple parsing errors in complex layouts, with PRs merged into the main repository. Designed and implemented a <strong>unified VLM online/offline inference framework</strong> supporting multiple backends like vLLM."
         }
     ],
 
@@ -94,7 +94,7 @@ const personalData = {
             title: "MOSS-VL: Open-Source Vision-Language Model",
             location: "Fudan University",
             period: "December 2025 - Present",
-            description: "Leading the OCR and Document capabilities for MOSS-VL. Built a complete data pipeline producing 200M high-quality pre-training data. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
+            description: "Leading the OCR and Document capabilities for <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>. Built a complete data pipeline producing 200M high-quality pre-training data. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
             links: [
                 { label: "GitHub", url: "https://github.com/OpenMOSS/MOSS-VL" }
             ]
@@ -103,7 +103,7 @@ const personalData = {
             title: "MinerU: Document Parsing Engine",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "Optimized and enhanced MinerU’s post-processing algorithm, significantly improving extraction accuracy and robustness for complex document layouts.",
+            description: "Optimized and enhanced <a href=\"https://github.com/opendatalab/MinerU\" target=\"_blank\">MinerU</a>'s post-processing algorithm, significantly improving extraction accuracy and robustness for complex document layouts.",
        
             links: [
                 { label: "GitHub", url: "https://github.com/opendatalab/MinerU" }
