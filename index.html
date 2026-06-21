@@ -7,94 +7,60 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    
+
     <title>Huazheng Zeng - Academic Page</title>
-    
-    <!-- 外部样式表 -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- 左侧侧栏 -->
-    <div class="sidebar">
-        <!-- 图片 -->
-        <img id="profile-photo" src="" alt="Profile Image">
+    <div class="page">
+        <header class="cv-header">
+            <div class="cv-header-main">
+                <h1 id="profile-name"></h1>
+                <p id="profile-title" class="profile-subtitle"></p>
+                <div id="contact-list" class="contact-row"></div>
+            </div>
+            <img id="profile-photo" class="cv-photo" src="" alt="Profile photo">
+        </header>
 
-        <h2 id="profile-name"></h2>
-        <p id="profile-title" style="margin-bottom: 30px;"></p>
-        
-        <p><strong>Contact</strong></p>
-        <ul id="contact-list">
-            <!-- 联系方式将通过JavaScript动态填充 -->
-        </ul>
-        
-        <p><strong>Research Interests</strong></p>
-        <ul id="interests-list">
-            <!-- 研究兴趣将通过JavaScript动态填充 -->
-        </ul>
-    </div>
+        <section>
+            <h2 class="section-title">About</h2>
+            <div id="about-content"></div>
+            <p id="interests-row" class="interests-row"></p>
+        </section>
 
-    <!-- 主体内容部分 -->
-    <div class="main-content">
-        <h1>About Me</h1>
-        <div id="about-content">
-            <!-- About内容将通过JavaScript动态填充 -->
-        </div>
-
-        <!-- News Section -->
         <section>
             <h2 class="section-title">News</h2>
-            <div class="section-content">
-                <ul id="news-list">
-                    <!-- 新闻动态将通过JavaScript动态填充 -->
-                </ul>
-            </div>
+            <ul id="news-list" class="entry-list"></ul>
         </section>
 
-        <!-- Internships Section -->
         <section>
             <h2 class="section-title">Internships</h2>
-            <div class="section-content">
-                <ul id="internships-list">
-                    <!-- 实习经历将通过JavaScript动态填充 -->
-                </ul>
-            </div>
+            <ul id="internships-list" class="entry-list"></ul>
         </section>
 
-        <!-- Research Experience Section -->
         <section>
             <h2 class="section-title">Research Experience</h2>
-            <div class="section-content">
-                <ul id="research-list">
-                    <!-- 研究经历将通过JavaScript动态填充 -->
-                </ul>
-            </div>
+            <ul id="research-list" class="entry-list"></ul>
         </section>
 
-        <!-- Projects Section -->
         <section>
             <h2 class="section-title">Projects</h2>
-            <div class="section-content">
-                <ul id="projects-list">
-                    <!-- 项目经历将通过JavaScript动态填充 -->
-                </ul>
-            </div>
+            <ul id="projects-list" class="entry-list"></ul>
         </section>
 
-        <!-- Publications Section -->
         <section>
             <h2 class="section-title">Publications</h2>
-            <div class="section-content">
-                <ul id="publications-list">
-                    <!-- 论文发表将通过JavaScript动态填充 -->
-                </ul>
-            </div>
+            <ul id="publications-list" class="entry-list"></ul>
         </section>
     </div>
 
-    <!-- 数据配置文件 -->
     <script src="js/data.js"></script>
-    <!-- 主逻辑文件 -->
     <script src="js/main.js"></script>
 </body>
 
