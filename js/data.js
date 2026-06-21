@@ -40,7 +40,7 @@ const personalData = {
 
     // About Me 描述
     about: [
-        "I am a final-year undergraduate student majoring in Software Engineering at <strong>Fudan University</strong>. In September 2026, I will begin my Ph.D. in Artificial Intelligence under the supervision of <a href=\"https://xpqiu.github.io/\" target=\"_blank\">Prof. Xipeng Qiu</a>, jointly trained by Fudan University and the <strong>Shanghai Artificial Intelligence Innovation Institute (SII)</strong>.",
+        "I am a final-year undergraduate student majoring in Software Engineering at <strong>Fudan University</strong>. In September 2026, I will be a joint Ph.D. student in Artificial Intelligence at Fudan University and Shanghai Innovation Institute (SII), advised by <a href=\"https://xpqiu.github.io/\" target=\"_blank\">Prof. Xipeng Qiu</a>.",
         "My research interests focus on <strong>Vision-Language Models</strong>, <strong>Multi-Modal Learning</strong>, <strong>Open Source Software</strong>, and <strong>AI-driven Systems</strong>.",
         "I am passionate about bridging the gap between vision and language, exploring innovative approaches to multi-modal understanding."
     ],
