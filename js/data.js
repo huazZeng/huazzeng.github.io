@@ -72,13 +72,13 @@ const personalData = {
             title: "VLM Pre-training Algorithm Intern",
             location: "OpenMOSS Team",
             period: "December 2025 - Present",
-            description: "Led the end-to-end development of OCR capabilities for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, focusing on OCR foundational data and document parsing. Drove model training for fine-grained perception tasks, including text localization, document parsing, and chart understanding, while actively contributing to evaluation and inference. Played a key role in building the team's engineering infrastructure, optimizing large-scale data production and grounding pipelines."
+            description: "Led the end-to-end development of OCR-related capabilities for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, including text recognition, document understanding, text localization, document parsing, and chart understanding. Primarily responsible for OCR foundational data and document parsing data, with deep involvement in model training, evaluation, and inference. Played a key role in building the team's engineering infrastructure, optimizing large-scale data production and grounding pipelines."
         },
         {
             title: "Vision-Language Model Algorithm Intern",
             location: "Shanghai AI Lab",
             period: "July 2025 - November 2025",
-            description: "Contributed to the development of document parsing tools and vision-language models for the chemistry domain. Explored the fine-grained grounding capabilities of general VLMs, improving the extraction accuracy of molecular spectra through supervised fine-tuning. Engineered a 10-million-scale data production pipeline, implementing distributed deployment and task scheduling using Ray. Optimized the core algorithm of <a href=\"https://github.com/opendatalab/MinerU\" target=\"_blank\">MinerU</a> (59k+ GitHub stars), resolving multiple parsing errors in complex layouts with PRs merged into the main repository. Designed and deployed a unified VLM inference framework supporting both online and offline execution with backends such as vLLM."
+            description: "Developed vision-language models and document parsing tools for the chemistry domain, applying fine-grained grounding and supervised fine-tuning to improve molecular spectra extraction. Engineered a 10-million-scale data production pipeline with distributed deployment and Ray-based task scheduling. Optimized the core algorithm of <a href=\"https://github.com/opendatalab/MinerU\" target=\"_blank\">MinerU</a> (59k+ GitHub stars), fixing complex layout parsing errors with PRs merged into the main repository. Built a unified VLM inference framework supporting online and offline serving with backends including vLLM."
         }
     ],
 
