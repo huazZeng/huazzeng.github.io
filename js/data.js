@@ -40,9 +40,9 @@ const personalData = {
 
     // About Me 描述
     about: [
-        "I am a final-year undergraduate student majoring in Software Engineering at <strong>Fudan University</strong>. In September 2026, I will be a joint Ph.D. student in Artificial Intelligence at Fudan University and Shanghai Innovation Institute (SII), advised by <a href=\"https://xpqiu.github.io/\" target=\"_blank\">Prof. Xipeng Qiu</a>.",
-        "My research interests focus on <strong>Vision-Language Models</strong>, <strong>Multi-Modal Learning</strong>, <strong>Open Source Software</strong>, and <strong>AI-driven Systems</strong>.",
-        "I am passionate about bridging the gap between vision and language, exploring innovative approaches to multi-modal understanding."
+        "I am Huazheng Zeng. I received my Bachelor's degree in Software Engineering from <strong>Fudan University</strong>. In September 2026, I will join Fudan University and Shanghai Innovation Institute (SII) as a joint Ph.D. student in Artificial Intelligence, advised by <a href=\"https://xpqiu.github.io/\" target=\"_blank\">Prof. Xipeng Qiu</a>.",
+        "My research interests lie in <strong>Vision-Language Models</strong>, <strong>Multi-Modal Learning</strong>, <strong>Open Source Software</strong>, and <strong>AI-driven Systems</strong>.",
+        "I am particularly interested in advancing multimodal understanding and bridging the gap between visual perception and language reasoning."
     ],
 
     // 新闻动态
@@ -76,7 +76,7 @@ const personalData = {
             title: "VLM Pre-training Algorithm Intern",
             location: "OpenMOSS Team",
             period: "December 2025 - Present",
-            description: "Led the end-to-end development of OCR-related capabilities for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, including text recognition, document understanding, text localization, document parsing, and chart understanding. Primarily responsible for OCR foundational data and document parsing data, with deep involvement in model training, evaluation, and inference. Played a key role in building the team's engineering infrastructure, optimizing large-scale data production and grounding pipelines."
+            description: "Led the end-to-end development of OCR-related capabilities for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, including text recognition, document understanding, text localization, document parsing, and chart understanding. Primarily responsible for OCR foundational data and document parsing data, and participated in multiple rounds of model iteration across training, evaluation, error analysis, and inference, continuously improving the model's OCR/document performance. Played a key role in building the team's engineering infrastructure, optimizing large-scale data production and grounding pipelines."
         },
         {
             title: "Vision-Language Model Algorithm Intern",
@@ -102,7 +102,7 @@ const personalData = {
             title: "MOSS-VL: Open-Source Vision-Language Model",
             location: "Fudan University",
             period: "December 2025 - Present",
-            description: "Leading the OCR and Document capabilities for <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>. Built a complete data pipeline producing 200M high-quality pre-training data. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
+            description: "Leading the OCR and Document capabilities for <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>. Built a complete data pipeline producing 200M high-quality pre-training data, and participated in multiple rounds of model iteration from data construction to training, evaluation, and benchmark-driven refinement. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
             links: [
                 { label: "GitHub", url: "https://github.com/OpenMOSS/MOSS-VL" }
             ]
@@ -140,4 +140,3 @@ const personalData = {
         }
     ]
 };
-
