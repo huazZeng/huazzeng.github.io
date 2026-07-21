@@ -48,6 +48,10 @@ const personalData = {
     // 新闻动态
     news: [
         {
+            date: "2026.07",
+            content: "OpenMOSS open-sourced <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL-Realtime</a> for real-time video understanding, alongside updated Base and Instruct models with improved OCR/document performance (OmniDocBench v1.6 SOTA). <a href=\"https://openmoss.github.io/MOSS-VL\" target=\"_blank\">Blog</a>"
+        },
+        {
             date: "2026.04",
             content: "We released <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, including both the Instruct and Base models! Check out the open-source release."
         },
