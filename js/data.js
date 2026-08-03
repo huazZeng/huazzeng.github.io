@@ -9,7 +9,7 @@ const personalData = {
         name: "Huazheng Zeng",
         title: "Undergraduate Student / Incoming PhD Student",
         institution: "Fudan University",
-        photo: "image/image.png",
+        photo: "image/me.jpeg",
         blog: "https://huazzengblog.github.io/"
     },
 
@@ -76,7 +76,7 @@ const personalData = {
             title: "VLM Pre-training Algorithm Intern",
             location: "OpenMOSS Team",
             period: "December 2025 - Present",
-            description: "Led the end-to-end development of OCR-related capabilities for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, including text recognition, document understanding, text localization, document parsing, and chart understanding. Primarily responsible for OCR foundational data and document parsing data, and participated in multiple rounds of model iteration across training, evaluation, error analysis, and inference, continuously improving the model's OCR/document performance. Played a key role in building the team's engineering infrastructure, optimizing large-scale data production and grounding pipelines."
+            description: "Led the end-to-end development of OCR-related capabilities for the open-source vision-language model <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>, including text recognition, document understanding, text localization, document parsing, and chart understanding. Primarily responsible for OCR foundational data and document parsing data, and participated in multiple full-cycle model iterations covering data construction, training, evaluation, error analysis, inference, and release preparation. Drove iterative upgrades of the data pipeline, improving data quality, coverage, filtering rules, grounding annotations, and benchmark-oriented data distribution to continuously enhance OCR/document performance. Played a key role in building the team's engineering infrastructure, optimizing large-scale data production and grounding pipelines."
         },
         {
             title: "Vision-Language Model Algorithm Intern",
@@ -102,7 +102,7 @@ const personalData = {
             title: "MOSS-VL: Open-Source Vision-Language Model",
             location: "Fudan University",
             period: "December 2025 - Present",
-            description: "Leading the OCR and Document capabilities for <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>. Built a complete data pipeline producing 200M high-quality pre-training data, and participated in multiple rounds of model iteration from data construction to training, evaluation, and benchmark-driven refinement. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
+            description: "Leading the OCR and Document capabilities for <a href=\"https://github.com/OpenMOSS/MOSS-VL/\" target=\"_blank\">MOSS-VL</a>. Built and iteratively upgraded a complete data pipeline producing 200M high-quality pre-training data, covering data sourcing, cleaning, filtering, annotation, quality inspection, and distribution adjustment. Participated in multiple end-to-end model iterations from data construction to training, evaluation, error analysis, inference validation, and benchmark-driven refinement. Achieved a 10+ point improvement on OCR/Document benchmarks compared to the previous version.",
             links: [
                 { label: "GitHub", url: "https://github.com/OpenMOSS/MOSS-VL" }
             ]
@@ -132,6 +132,12 @@ const personalData = {
 
     // 论文发表
     publications: [
+        {
+            title: "MOSS-Video-Preview: Toward Real-Time Video Understanding via Cross-Attention",
+            authors: "Pengyu Wang, Chenkun Tan, Shaojun Zhou, Wei Huang, Qirui Zhou, Zhan Huang, Zhen Ye, Jijun Cheng, Xiaomeng Qian, Yanxin Chen, Xingyang He, <u>Huazheng Zeng</u>, Chenghao Wang, Pengfei Wang, Hongkai Wang, Shanqing Gao, Yixian Tian, Chenghao Liu, Xinghao Wang, Botian Jiang, Xipeng Qiu",
+            venue: "arXiv preprint arXiv:2606.07639, 2026",
+            url: "https://arxiv.org/abs/2606.07639"
+        },
         {
             title: "Your 'Notice' Is Missing: Detecting and Fixing Violations of Modification Terms in Open Source Licenses during Forking",
             authors: "Kaifeng Huang, Yingfeng Xia, Bihuan Chen, Siyang He, <u>Huazheng Zeng</u>, Zhuotong Zhou, Jin Guo, Xin Peng",

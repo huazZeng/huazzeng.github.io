@@ -98,8 +98,10 @@ a:hover {
 
 .cv-photo {
   width: 140px;
-  height: 168px;
+  aspect-ratio: 3 / 4;
+  height: auto;
   object-fit: cover;
+  object-position: center;
   border-radius: 2px;
   flex-shrink: 0;
   border: 1px solid var(--border);
@@ -262,7 +264,6 @@ a.tag:hover {
 
   .cv-photo {
     width: 120px;
-    height: 144px;
   }
 
   .contact-row {
