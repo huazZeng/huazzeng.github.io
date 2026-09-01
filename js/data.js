@@ -7,7 +7,7 @@ const personalData = {
     // 基本信息
     profile: {
         name: "Huazheng Zeng",
-        title: "Undergraduate Student / Incoming PhD Student",
+        title: "Joint PhD Student, FDU & SII",
         institution: "Fudan University",
         photo: "image/me.jpeg",
         blog: "https://huazzengblog.github.io/"
@@ -19,7 +19,7 @@ const personalData = {
             label: "huazZeng",
             url: "https://github.com/huazZeng"
         },
-        email: "hzceng22@m.fudan.edu.cn",
+        email: "hzzeng26@m.fudan.edu.cn",
         linkedin: {
             label: "Huazheng Zeng",
             url: "https://www.linkedin.com/in/huazheng-zeng-2750a3372/"
