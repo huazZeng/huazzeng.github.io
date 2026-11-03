@@ -1,123 +1,190 @@
-/**
- * 主JavaScript文件
- * 负责根据data.js中的数据动态渲染页面内容
- */
-
 document.addEventListener('DOMContentLoaded', function () {
     renderHeader();
     renderMainContent();
+    initNavigation();
+    initHeaderScroll();
 });
 
-/**
- * 渲染页头（姓名、职位、联系方式、照片）
- */
-function renderHeader() {
-    const { profile, contact, interests } = personalData;
-
-    document.getElementById('profile-name').textContent = profile.name;
-    document.getElementById('profile-title').textContent =
-        `${profile.title} · ${profile.institution}`;
-    document.getElementById('profile-photo').src = profile.photo;
-
-    const contacts = [
-        `<a href="mailto:${contact.email}">${contact.email}</a>`,
-        `<a href="${contact.github.url}" target="_blank">GitHub</a>`,
-        `<a href="${contact.linkedin.url}" target="_blank">LinkedIn</a>`,
-        `<a href="${contact.googleScholar.url}" target="_blank">Google Scholar</a>`,
-        `<a href="${profile.blog}" target="_blank">Blog</a>`
-    ];
-
-    document.getElementById('contact-list').innerHTML =
-        contacts.join('<span class="contact-sep">|</span>');
-
-    document.getElementById('interests-row').innerHTML =
-        `<strong>Research Interests:</strong> ${interests.join(' · ')}`;
+function externalLink(url, label, className = '') {
+    return `<a href="${url}" class="${className}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 }
 
-/**
- * 渲染主内容区
- */
+function renderHeader() {
+    const { profile, contact } = personalData;
+
+    document.getElementById('profile-name').textContent = profile.name;
+    document.getElementById('profile-title').textContent = profile.title;
+    document.getElementById('profile-institution').textContent = `${profile.institution} × SII`;
+    document.getElementById('profile-photo').src = profile.photo;
+    document.getElementById('profile-photo').alt = `Portrait of ${profile.name}`;
+
+    const contacts = [
+        `<a href="mailto:${contact.email}">Email <span aria-hidden="true">↗</span></a>`,
+        externalLink(contact.github.url, 'GitHub <span aria-hidden="true">↗</span>'),
+        externalLink(contact.linkedin.url, 'LinkedIn <span aria-hidden="true">↗</span>'),
+        externalLink(contact.googleScholar.url, 'Google Scholar <span aria-hidden="true">↗</span>'),
+        externalLink(profile.blog, 'Blog <span aria-hidden="true">↗</span>')
+    ];
+
+    document.getElementById('contact-list').innerHTML = contacts.join('');
+    document.getElementById('footer-email').href = `mailto:${contact.email}`;
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+}
+
 function renderMainContent() {
-    const { about } = personalData;
+    const { about, interests } = personalData;
 
     document.getElementById('about-content').innerHTML =
         about.map(paragraph => `<p>${paragraph}</p>`).join('');
+    document.getElementById('interests-row').innerHTML =
+        interests.map(interest => `<span class="interest-tag">${interest}</span>`).join('');
 
     renderNews();
-    renderInternships();
-    renderResearch();
+    renderEntries('internships-list', personalData.internships);
+    renderEntries('research-list', personalData.research);
     renderProjects();
     renderPublications();
 }
 
-/**
- * 渲染新闻动态
- */
 function renderNews() {
     document.getElementById('news-list').innerHTML = personalData.news.map(item => `
         <li>
-            <span class="news-date">[${item.date}]</span>${item.content}
+            <time class="news-date">${item.date}</time>
+            <div class="news-content">${item.content}</div>
         </li>
     `).join('');
 }
 
-/**
- * 渲染带标题/元信息的条目列表
- */
-function renderEntries(listId, items, options) {
+function renderEntries(listId, items) {
     const list = document.getElementById(listId);
     if (!list) return;
 
-    list.innerHTML = items.map(item => {
+    list.innerHTML = items.map(item => `
+        <li>
+            <div class="entry-main">
+                <span class="entry-title">${item.title}</span>
+                <span class="entry-location">${item.location}</span>
+            </div>
+            <span class="entry-meta">${item.period}</span>
+            ${item.description ? `<p class="entry-desc">${item.description}</p>` : ''}
+        </li>
+    `).join('');
+}
+
+function renderProjects() {
+    document.getElementById('projects-list').innerHTML = personalData.projects.map((item, index) => {
         const links = item.links ? item.links.map(link =>
-            `<a href="${link.url}" class="tag" target="_blank">${link.label}</a>`
+            externalLink(link.url, link.label, 'tag')
         ).join('') : '';
-
-        const linksBlock = links
-            ? `<div class="entry-links">${links}</div>`
-            : '';
-
-        const descBlock = item.description
-            ? `<p class="entry-desc">${item.description}</p>`
-            : '';
 
         return `
             <li>
-                <div class="entry-header">
-                    <span class="entry-title">${item.title}</span>
-                    <span class="entry-meta">${item.location} · ${item.period}</span>
+                <span class="project-index">${String(index + 1).padStart(2, '0')}</span>
+                <div class="project-content">
+                    <div class="project-heading">
+                        <div>
+                            <span class="entry-title">${item.title}</span>
+                            <span class="entry-location">${item.location}</span>
+                        </div>
+                        <span class="entry-meta">${item.period}</span>
+                    </div>
+                    <p class="entry-desc">${item.description}</p>
+                    ${links ? `<div class="entry-links">${links}</div>` : ''}
                 </div>
-                ${descBlock}
-                ${linksBlock}
             </li>
         `;
     }).join('');
 }
 
-function renderInternships() {
-    renderEntries('internships-list', personalData.internships);
-}
-
-function renderResearch() {
-    renderEntries('research-list', personalData.research);
-}
-
-function renderProjects() {
-    renderEntries('projects-list', personalData.projects);
-}
-
-/**
- * 渲染论文发表
- */
 function renderPublications() {
     document.getElementById('publications-list').innerHTML =
-        personalData.publications.map(item => `
+        personalData.publications.map((item, index) => `
             <li>
-                <div class="entry-header">
-                    <a href="${item.url}" class="pub-title-link" target="_blank">${item.title}</a>
+                <span class="pub-number">[${index + 1}]</span>
+                <div>
+                    ${externalLink(item.url, item.title, 'pub-title-link')}
+                    <span class="pub-authors">${item.authors}</span>
+                    <em class="pub-venue">${item.venue}</em>
                 </div>
-                <span class="pub-authors">${item.authors}</span>
-                <em class="pub-venue">${item.venue}</em>
+                <span class="pub-arrow" aria-hidden="true">↗</span>
             </li>
         `).join('');
+}
+
+function initNavigation() {
+    const header = document.getElementById('site-header');
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('site-nav');
+    const navLinks = [...nav.querySelectorAll('a[data-section]')];
+
+    function closeMenu() {
+        header.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
+    }
+
+    toggle.addEventListener('click', function () {
+        const isOpen = header.classList.toggle('is-open');
+        document.body.classList.toggle('menu-open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeMenu();
+            toggle.focus();
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) closeMenu();
+    });
+
+    const sections = navLinks
+        .map(link => document.getElementById(link.dataset.section))
+        .filter(Boolean);
+    let ticking = false;
+
+    function updateActiveSection() {
+        const readingLine = window.scrollY + header.offsetHeight + 120;
+        let currentSection = window.scrollY < sections[0].offsetTop - header.offsetHeight - 120
+            ? null
+            : sections[0];
+
+        sections.forEach(section => {
+            if (section.offsetTop <= readingLine) currentSection = section;
+        });
+
+        navLinks.forEach(link => {
+            const active = currentSection && link.dataset.section === currentSection.id;
+            link.classList.toggle('is-active', Boolean(active));
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            requestAnimationFrame(updateActiveSection);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+    updateActiveSection();
+}
+
+function initHeaderScroll() {
+    const header = document.getElementById('site-header');
+
+    function update() {
+        header.classList.toggle('is-scrolled', window.scrollY > 20);
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
 }
