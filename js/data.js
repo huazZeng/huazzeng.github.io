@@ -48,7 +48,7 @@ const personalData = {
     news: [
         {
             date: "2026.09",
-            content: "My main work at <strong>Shanghai AI Lab</strong>, <a href=\"https://arxiv.org/abs/2609.06703\" target=\"_blank\">DianShi-RxnDB</a>, was released: a large-scale organic reaction data platform built through automated extraction and normalization."
+            content: "<a href=\"https://arxiv.org/abs/2609.06703\" target=\"_blank\">DianShi-RxnDB</a>, the main project I took part in during my internship at <strong>Shanghai AI Lab</strong> from July to November 2025, has been released. I’m grateful to have been part of it."
         },
         {
             date: "2026.08",
