@@ -98,17 +98,27 @@ function renderProjects() {
 
 function renderPublications() {
     document.getElementById('publications-list').innerHTML =
-        personalData.publications.map((item, index) => `
-            <li>
-                <span class="pub-number">[${index + 1}]</span>
-                <div>
-                    ${externalLink(item.url, item.title, 'pub-title-link')}
-                    <span class="pub-authors">${item.authors}</span>
-                    <em class="pub-venue">${item.venue}</em>
-                </div>
-                <span class="pub-arrow" aria-hidden="true">↗</span>
-            </li>
-        `).join('');
+        personalData.publications.map((item, index) => {
+            const links = item.links ? item.links.map(link =>
+                externalLink(link.url, link.label)
+            ).join('') : '';
+            const authorTitle = item.authors.replace(/<[^>]*>/g, '');
+
+            return `
+                <li>
+                    <span class="pub-number">[${index + 1}]</span>
+                    <div>
+                        ${externalLink(item.url, item.title, 'pub-title-link')}
+                        <span class="pub-authors" title="${authorTitle}">${item.authors}</span>
+                        <div class="pub-meta">
+                            <em class="pub-venue">${item.venue}</em>
+                            ${links ? `<span class="pub-links">${links}</span>` : ''}
+                        </div>
+                    </div>
+                    <span class="pub-arrow" aria-hidden="true">↗</span>
+                </li>
+            `;
+        }).join('');
 }
 
 function initNavigation() {

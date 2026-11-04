@@ -474,8 +474,8 @@ img {
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 10px 22px;
+  margin-top: 10px;
 }
 
 a.tag {
@@ -538,9 +538,9 @@ a.tag:hover {
 
 .publication-list > li {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) 24px;
-  gap: 18px;
-  padding: 28px 0;
+  grid-template-columns: 30px minmax(0, 1fr) 18px;
+  gap: 14px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -554,17 +554,17 @@ a.tag:hover {
 }
 
 .pub-number {
-  padding-top: 4px;
+  padding-top: 3px;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-variant-numeric: tabular-nums;
 }
 
 .pub-title-link {
   font-family: var(--font-heading);
-  font-size: 1.18rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.45;
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 4px;
@@ -577,23 +577,57 @@ a.tag:hover {
 }
 
 .pub-authors {
-  display: block;
-  margin-top: 9px;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  display: -webkit-box;
+  margin-top: 5px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-top: 4px;
 }
 
 .pub-venue {
-  display: block;
-  margin-top: 5px;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
+}
+
+.pub-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.78rem;
+}
+
+.pub-links a {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-decoration-color: #c2cbd5;
+  text-underline-offset: 3px;
+}
+
+.pub-links a::after {
+  content: " ↗";
+  font-size: 0.72rem;
+}
+
+.pub-links a:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
 }
 
 .pub-arrow {
-  padding-top: 3px;
-  color: var(--accent);
+  padding-top: 2px;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 /* Footer */
